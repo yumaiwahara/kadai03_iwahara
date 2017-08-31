@@ -4,13 +4,28 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background-image: url(../image/bg.jpg);
+  background-size: cover;
 }
 
 #wrapper{
   width: 90%;
   margin: 0, auto;
 }
+
+.title{
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  margin: 50px;
+}
+.select{
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+}
 #hantei{
+  color: #ffffff;
   font-size: 32px;
   text-align: center;
 }
@@ -24,13 +39,18 @@
 #btn1{
   width: 30%;
   height: 30%;
+
 }
 #btn2{
   width: 30%;
   height: 30%;
-  
+
 }
 #btn3{
   width: 30%;
   height: 30%;
+}
+
+#aiko{
+  text-align: center;
 }
