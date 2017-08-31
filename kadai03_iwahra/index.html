@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="css/reset.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="./image/favicon.ico">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <title>Document</title>
+  <title>限定ジャンケン</title>
 </head>
 <body id="b-wrapper">
   <div id="wrapper">
@@ -35,8 +36,8 @@
   あいこからの次の手
   画像使用
   OP－＞手を選ぶー＞ざわざわ・・・－＞結果
-  結果のパターン　仮　・お互いの手を表示、数秒後ー＞勝敗画像　めんどそう
-                    ・お互いの手のと勝敗を１発で納める　楽
+  結果のパターン　仮　・お互いの手を表示、数秒後ー＞勝敗画像　
+                    ・お互いの手のと勝敗を１発で納める　
                     ・あいこの処理
     -->
 
@@ -51,7 +52,7 @@
 
 
     // 非表示
-    // function() btn1n = btn1.style.display = 'none';
+    // function btn1n() = btn1.style.display = 'none';
     // var btn2n = btn2.style.display = 'none';
     // var btn3n = btn3.style.display = 'none';
     // aiko.style.display = 'none';
@@ -66,42 +67,75 @@
     // 引数と戻り値（ｔ＝戻り値）
     var t = rand(3);
 
-    btn1.addEventListener('click',function(){
-          if(t == 1){
+    function gu(){
+      btn1.addEventListener('click',function(){
+            if(t == 1){
 
-    // ぐー
-            $("#hantei").html('<h1>勝ち</h1>');
-            $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
-            btn2.style.display = 'none';
-            btn3.style.display = 'none';
-            // aiko.style.display = 'none';
-            var teki = document.getElementById('teki');
-            $("#teki").html('<img src="./image/t.jpg" alt="ちょき" />');
-          }else if(t == 2){
-            $("#hantei").html('<h1>負け</h1>');
-            $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
-            btn2.style.display = 'none';
-            btn3.style.display = 'none';
-            // aiko.style.display = 'none';
-            $("#teki").html('<img src="./image/p.jpg" alt="ぱー" />');
+      // ぐー
+              $("#hantei").html('<h1>勝ち！</h1>');
+              $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
+              btn2.style.display = 'none';
+              btn3.style.display = 'none';
+              // aiko.style.display = 'none';
+              var teki = document.getElementById('teki');
+              $("#teki").html('<img src="./image/t.jpg" alt="ちょき" />');
+            }else if(t == 2){
+              $("#hantei").html('<h1>負け</h1>');
+              $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
+              btn2.style.display = 'none';
+              btn3.style.display = 'none';
+              // aiko.style.display = 'none';
+              $("#teki").html('<img src="./image/p.jpg" alt="ぱー" />');
 
-          }else if (t == 3){
-            $("#hantei").html('<h1>あいこ</h1>');
-            var teki = document.getElementById('teki');
-            $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
-            btn2.style.display = 'none';
-            btn3.style.display = 'none';
-            $("#teki").html('<img src="./image/g.jpg" alt="ぐー" />');
+            }else if (t == 3){
+              $("#hantei").html('<h1>あいこ</h1>');
+              var teki = document.getElementById('teki');
+              $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
+              btn2.style.display = 'none';
+              btn3.style.display = 'none';
+              $("#teki").html('<img src="./image/g.jpg" alt="ぐー" />');
 
 
-          }
-    });
+            }
+      });
+    }
+gu();
+    // btn1.addEventListener('click',function(){
+    //       if(t == 1){
+    //
+    // // ぐー
+    //         $("#hantei").html('<h1>勝ち</h1>');
+    //         $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
+    //         btn2.style.display = 'none';
+    //         btn3.style.display = 'none';
+    //         // aiko.style.display = 'none';
+    //         var teki = document.getElementById('teki');
+    //         $("#teki").html('<img src="./image/t.jpg" alt="ちょき" />');
+    //       }else if(t == 2){
+    //         $("#hantei").html('<h1>負け</h1>');
+    //         $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
+    //         btn2.style.display = 'none';
+    //         btn3.style.display = 'none';
+    //         // aiko.style.display = 'none';
+    //         $("#teki").html('<img src="./image/p.jpg" alt="ぱー" />');
+    //
+    //       }else if (t == 3){
+    //         $("#hantei").html('<h1>あいこ</h1>');
+    //         var teki = document.getElementById('teki');
+    //         $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
+    //         btn2.style.display = 'none';
+    //         btn3.style.display = 'none';
+    //         $("#teki").html('<img src="./image/g.jpg" alt="ぐー" />');
+    //
+    //
+    //       }
+    // });
 
     btn2.addEventListener('click',function(){
           if(t == 1){
 
     // チョキ
-            $("#hantei").html('<h1>勝ち</h1>');
+            $("#hantei").html('<h1>勝ち！</h1>');
             $("#btn2").html('<img src="./image/t.jpg" alt="" />');
             btn1.style.display = 'none';
             btn3.style.display = 'none';
@@ -129,7 +163,7 @@
           if(t == 1){
 
     // パー
-            $("#hantei").html('<h1>勝ち</h1>');
+            $("#hantei").html('<h1>勝ち！</h1>');
             $("#btn3").html('<img src="./image/p.jpg" alt="" />');
             btn1.style.display = 'none';
             btn2.style.display = 'none';
