@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#b-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#wrapper{
+  width: 90%;
+  margin: 0, auto;
+}
+#hantei{
+  font-size: 32px;
+  text-align: center;
+}
+
+
+.tehuda{
+  display: flex;
+  justify-content: space-around;
+}
+
+#btn1{
+  width: 30%;
+  height: 30%;
+}
+#btn2{
+  width: 30%;
+  height: 30%;
+  
+}
+#btn3{
+  width: 30%;
+  height: 30%;
+}
