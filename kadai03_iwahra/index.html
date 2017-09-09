@@ -42,23 +42,6 @@
     -->
 
   <script>
-    var hantei = document.getElementById('hantei');
-    var btn1 = document.getElementById('btn1');
-    var btn2 = document.getElementById('btn2');
-    var btn3 = document.getElementById('btn3');
-    var teki = document.getElementById('teki');
-    var zawa = document.getElementById('zawa');
-    var aiko = document.getElementById('aiko');
-
-
-    // 非表示
-    // function btn1n() = btn1.style.display = 'none';
-    // var btn2n = btn2.style.display = 'none';
-    // var btn3n = btn3.style.display = 'none';
-    // aiko.style.display = 'none';
-
-
-
     // ランダム関数
     function rand(n){
       var num = Math.floor(Math.random() * n + 1);
@@ -76,17 +59,13 @@
               $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
               btn2.style.display = 'none';
               btn3.style.display = 'none';
-              // aiko.style.display = 'none';
-              var teki = document.getElementById('teki');
               $("#teki").html('<img src="./image/t.jpg" alt="ちょき" />');
             }else if(t == 2){
               $("#hantei").html('<h1>負け</h1>');
               $("#btn1").html('<img src="./image/g.jpg" alt="ぐー" />');
               btn2.style.display = 'none';
               btn3.style.display = 'none';
-              // aiko.style.display = 'none';
               $("#teki").html('<img src="./image/p.jpg" alt="ぱー" />');
-
             }else if (t == 3){
               $("#hantei").html('<h1>あいこ</h1>');
               var teki = document.getElementById('teki');
@@ -94,30 +73,24 @@
               btn2.style.display = 'none';
               btn3.style.display = 'none';
               $("#teki").html('<img src="./image/g.jpg" alt="ぐー" />');
-
-
             }
       });
     }
 gu();
-  
+
     btn2.addEventListener('click',function(){
           if(t == 1){
-
     // チョキ
             $("#hantei").html('<h1>勝ち！</h1>');
             $("#btn2").html('<img src="./image/t.jpg" alt="" />');
             btn1.style.display = 'none';
             btn3.style.display = 'none';
-            // aiko.style.display = 'none';
-            var teki = document.getElementById('teki');
             $("#teki").html('<img src="./image/p.jpg" alt="" />');
           }else if(t == 2){
             $("#hantei").html('<h1>負け</h1>');
             $("#btn2").html('<img src="./image/t.jpg" alt="" />');
             btn1.style.display = 'none';
             btn3.style.display = 'none';
-            // aiko.style.display = 'none';
             $("#teki").html('<img src="./image/g.jpg" alt="" />');
           }else if (t == 3){
             $("#hantei").html('<h1>あいこ</h1>');
@@ -131,21 +104,17 @@ gu();
 
     btn3.addEventListener('click',function(){
           if(t == 1){
-
     // パー
             $("#hantei").html('<h1>勝ち！</h1>');
             $("#btn3").html('<img src="./image/p.jpg" alt="" />');
             btn1.style.display = 'none';
             btn2.style.display = 'none';
-            // aiko.style.display = 'none';
-            var teki = document.getElementById('teki');
             $("#teki").html('<img src="./image/g.jpg" alt="" />');
           }else if(t == 2){
             $("#hantei").html('<h1>負け</h1>');
             $("#btn3").html('<img src="./image/p.jpg" alt="" />');
             btn1.style.display = 'none';
             btn2.style.display = 'none';
-            // aiko.style.display = 'none';
             $("#teki").html('<img src="./image/t.jpg" alt="" />');
           }else if (t == 3){
             $("#hantei").html('<h1>あいこ</h1>');
@@ -156,7 +125,6 @@ gu();
             $("#teki").html('<img src="./image/p.jpg" alt="" />');
           }
     });
-
     </script>
 
 </body>
